@@ -132,27 +132,16 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(40)),
-            gradient: LinearGradient(
-              // Where the linear gradient begins and ends
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.grey[500],
-                Colors.white,
-              ],
-            ),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.grey[400],
-                  offset: Offset(2.0, 2.0),
-                  blurRadius: 3,
-                  spreadRadius: 2),
-              BoxShadow(
-                  color: Colors.grey[200].withOpacity(0.5),
-                  offset: Offset(-2.0, -2.0),
-                  blurRadius: 3,
-                  spreadRadius: 2),
-            ]));
+          borderRadius: BorderRadius.all(Radius.circular(40)),
+          gradient: LinearGradient(
+            // Where the linear gradient begins and ends
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Colors.grey[500],
+              Colors.white,
+            ],
+          ),
+        ));
   }
 }
