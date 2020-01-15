@@ -74,6 +74,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             check == true ? buildContainer2() : buildContainer1(),
+            Container(
+              height: 100,
+            ),
+            check == true ? buildContainer1() : buildContainer2(),
           ],
         ),
       ),
@@ -97,12 +101,12 @@ class _MyHomePageState extends State<MyHomePage> {
               BoxShadow(
                   color: Colors.grey[500],
                   offset: Offset(4.0, 4.0),
-                  blurRadius: 15,
+                  blurRadius: 25,
                   spreadRadius: 1),
               BoxShadow(
                   color: Colors.white,
                   offset: Offset(-4.0, -4.0),
-                  blurRadius: 15,
+                  blurRadius: 25,
                   spreadRadius: 1),
             ]),
       ),
@@ -119,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(40)),
-              color: Colors.grey[300].withOpacity(0.7),
+              color: Colors.grey[300].withOpacity(0.6),
             ),
             child: Icon(
               Icons.android,
@@ -128,16 +132,27 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(40)),
-          gradient: LinearGradient(
-            // Where the linear gradient begins and ends
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Colors.grey[500],
-              Colors.white,
-            ],
-          ),
-        ));
+            borderRadius: BorderRadius.all(Radius.circular(40)),
+            gradient: LinearGradient(
+              // Where the linear gradient begins and ends
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colors.grey[500],
+                Colors.white,
+              ],
+            ),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey[400],
+                  offset: Offset(2.0, 2.0),
+                  blurRadius: 3,
+                  spreadRadius: 2),
+              BoxShadow(
+                  color: Colors.grey[200].withOpacity(0.5),
+                  offset: Offset(-2.0, -2.0),
+                  blurRadius: 3,
+                  spreadRadius: 2),
+            ]));
   }
 }
