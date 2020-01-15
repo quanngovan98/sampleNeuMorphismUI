@@ -123,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(40)),
-              color: Colors.grey[300].withOpacity(0.6),
+              color: Colors.grey[300].withOpacity(0.8),
             ),
             child: Icon(
               Icons.android,
